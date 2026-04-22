@@ -1,0 +1,15 @@
+command: [
+  "streamlit",
+  "run",
+  "app.py"
+]
+
+env:
+  - name: "DATABRICKS_WAREHOUSE_ID"
+    valueFrom: "sql-warehouse"
+  - name: STREAMLIT_BROWSER_GATHER_USAGE_STATS
+    value: "false"
+  - name: MAIN_DATA_TABLE
+    value: "brb_fla.marketing.cadastro_leads"
+  - name: SAVED_AUDIENCE_TABLE
+    value: "brb_fla.marketing.audiencias_salvas"
